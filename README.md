@@ -2,10 +2,6 @@
 
 **One Obsidian note, everywhere, without syncing your whole vault.**
 
-[![CI](https://github.com/Vanshpanchal/obsidian-shared-note-sync/actions/workflows/ci.yml/badge.svg)](https://github.com/Vanshpanchal/obsidian-shared-note-sync/actions/workflows/ci.yml)
-[![Latest release](https://img.shields.io/github/v/release/Vanshpanchal/obsidian-shared-note-sync)](https://github.com/Vanshpanchal/obsidian-shared-note-sync/releases/latest)
-[![License: MIT](https://img.shields.io/github/license/Vanshpanchal/obsidian-shared-note-sync)](https://github.com/Vanshpanchal/obsidian-shared-note-sync/blob/main/LICENSE)
-
 Repository: <https://github.com/Vanshpanchal/obsidian-shared-note-sync>
 
 VaultBridge keeps a single note (`Shared/shared.md`) and its attachments in sync between
