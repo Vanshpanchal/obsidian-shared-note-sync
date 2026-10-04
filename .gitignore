@@ -1,0 +1,24 @@
+# --- OS / editors ---
+.DS_Store
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# --- Secrets and local config: never commit ---
+.env
+.env.*
+!.env.example
+backend/copy.env
+
+# --- Build output ---
+node_modules/
+backend/*.tar.gz
+obsidian-plugin/main.js
+obsidian-plugin/*.tsbuildinfo
+app/build/
+app/.dart_tool/
+
+# --- Local scratch ---
+PROJECT.md
+app/flutter_*.png

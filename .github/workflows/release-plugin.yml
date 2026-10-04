@@ -1,0 +1,39 @@
+# Publishes the Obsidian plugin. Push a tag that equals the version in
+# obsidian-plugin/manifest.json (for example 1.1.0) and this attaches main.js and
+# manifest.json to a GitHub release. BRAT and manual installs download those two files.
+name: Release plugin
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: obsidian-plugin
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: obsidian-plugin/package-lock.json
+      - name: Tag must match manifest version
+        run: |
+          v=$(node -p "require('./manifest.json').version")
+          if [ "$v" != "${GITHUB_REF_NAME}" ]; then
+            echo "Tag ${GITHUB_REF_NAME} does not match manifest.json version $v"; exit 1
+          fi
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${GITHUB_REF_NAME}" main.js manifest.json --title "${GITHUB_REF_NAME}" --generate-notes

@@ -1,0 +1,56 @@
+name: vault_bridge
+description: "VaultBridge: edit and preview one Obsidian note on your phone, synced through your own Appwrite function."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  cached_network_image: ^4.0.3
+  connectivity_plus: ^7.3.2
+  file_picker: ^13.1.0
+  flutter:
+    sdk: flutter
+  flutter_cache_manager: ^3.4.5
+  flutter_markdown_plus: ^1.0.12
+  flutter_math_fork: ^0.7.4
+  flutter_secure_storage: ^11.2.0
+  http: ^1.6.0
+  image_picker: ^1.2.3
+  lucide_icons_flutter: ^3.1.21
+  markdown: ^7.3.1
+  mermaid_core: ^0.3.0
+  path_provider: ^2.1.6
+  pdf: ^3.13.1
+  share_plus: ^13.3.1
+  shared_preferences: ^2.5.5
+  url_launcher: ^6.3.3
+  uuid: ^4.6.0
+  yaml: ^3.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-Italic.ttf
+          style: italic
+    - family: JetBrains Mono
+      fonts:
+        - asset: assets/fonts/JetBrainsMono-Regular.ttf
+        - asset: assets/fonts/JetBrainsMono-Medium.ttf
+          weight: 500

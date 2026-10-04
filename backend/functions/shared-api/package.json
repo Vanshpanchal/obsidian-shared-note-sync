@@ -1,0 +1,14 @@
+{
+  "name": "shared-api",
+  "version": "1.0.0",
+  "description": "Appwrite Function that syncs a single shared.md document",
+  "type": "module",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "test": "node --test 'test/**/*.test.js'"
+  },
+  "dependencies": {
+    "node-appwrite": "^29.0.0"
+  }
+}
